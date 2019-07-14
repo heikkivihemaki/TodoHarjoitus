@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Todo-lista</title>
+</head>
+<body>
+<h1> Todo-lista </h1>
+
+<div class="container">
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Hae tehtävät</div>
+        <div class="panel-body">
+            <button class="btn" onclick="performGetRequest1()">Näytä</button>
+            <button class="btn" onclick="clearOutput()">Tyhjennä</button>
+            <div class="panel-body" id="getResult1"></div>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Lisää tehtävä</div>
+        <div class="panel-body">
+            <form class="form-inline" id="todoInputForm" style="width: fit-content">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="todoTitle"
+                           placeholder="Kirjoita tehtävä...">
+                    <button type="submit" class="btn btn-primary">Lisää</button>
+                </div>
+            </form>
+            <div class="panel-body" id="postResult"></div>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Poista tehtävä</div>
+        <div class="panel-body">
+            <input type="text" class="form-control" id="todoDelete" style="width: fit-content"
+                   placeholder="Tehtävän numero ..."/>
+            <div>
+                <button class="btn" onclick="performDelete()">Poista</button>
+                <button class="btn" onclick="clearOutput()">Sulje</button>
+            </div>
+
+            <div class="panel-body" id="getResult2"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript" src="code.js"></script>
+
+</body>
+</html>
